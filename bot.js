@@ -20,7 +20,7 @@ function respond() {
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-    postMessage("http://daddyleagues.com/ggf/team/"+request.text.substring(7,10)+"/depthchart");
+    postMessage("http://daddyleagues.com/ggf/team/"+request.text.substring(6,10)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
