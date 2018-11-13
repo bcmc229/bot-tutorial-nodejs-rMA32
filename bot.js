@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;
-      botRegexSC = /^\/SDL/i;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i;
+      botRegex = /^\/cool guy/;  botRegexDL = /^\/team/i;
+      botRegexSC = /^\/sched/i;
+      botRegexP = /^\/search/i;  botRegexTw = /^\/twitch/i;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAX"
                 ,"BAL","LAC","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","LAR","CHI","CAR",
