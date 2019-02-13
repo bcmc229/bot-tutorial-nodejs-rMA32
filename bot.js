@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/team/i;
-      botRegexSC = /^\/schedule/i;
+      botRegexSC = /^\/schedule/i; botRegexWeb = /^\/nwl/i
       botRegexP = /^\/search/i;  botRegexTw = /^\/twitch/i;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAX"
@@ -27,6 +27,12 @@ function respond() {
     this.res.writeHead(200);
     
     postMessage("http://www.daddyleagues.com/NWL/schedules");
+    this.res.end();
+  }
+    else if(request.text && botRegexWeb.test(request.text)) {
+    this.res.writeHead(200);
+    
+    postMessage("http://www.daddyleagues.com/NWL");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
