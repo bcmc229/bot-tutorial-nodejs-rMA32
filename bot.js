@@ -50,16 +50,6 @@ function respond() {
     this.res.end();
   } 
   
-  else if(request.text && botRegexSiege.test(request.text)) {
-    this.res.writeHead(200);
-    if(0.6 >= Math.random() > 0.3)
-      postMessage(siege1);
-    else if(Math.random() >0.6)
-      postMessage(siege3)
-    else
-      postMessage(siege2);
-    this.res.end();
-  }
   
   else {
     console.log("don't care");
